@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <main>
       <nav>
-        <h1>blog</h1>
+        <h1>Blogtopia</h1>
       </nav>
     </main>
   );
