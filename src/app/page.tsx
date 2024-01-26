@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Post from "./lib/component/Post";
+import Posts from "./lib/component/Posts";
 
 export default function Home() {
   return (
@@ -9,7 +9,7 @@ export default function Home() {
       </div>
       <div className="flex flex-col items-center justify-center p-6">
         <h2 className="font-bold text-xl">Latest Blogs</h2>
-        <Post />
+        <Posts />
       </div>
     </div>
   );
