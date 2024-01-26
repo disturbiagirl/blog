@@ -8,8 +8,10 @@ export default function Home() {
         <Image src="/cover.jpg" height={1000} width={1000} alt="cover image" />
       </div>
       <div className="flex flex-col items-center justify-center p-6">
-        <h2 className="font-bold text-xl">Latest Blogs</h2>
-        <Posts />
+        <h2 className="font-bold text-xl pb-6">Latest Blogs</h2>
+        <div className="flex items-center justify-center">
+          <Posts />
+        </div>
       </div>
     </div>
   );
