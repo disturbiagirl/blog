@@ -1,5 +1,7 @@
-import { Key } from "react";
+"use client";
 import Image from "next/image";
+import { useState } from "react";
+import Button from "./Button";
 
 type PostProps = {
   blogs: PostProps[];
@@ -7,6 +9,7 @@ type PostProps = {
   content_text: string;
   photo_url: string;
   category: string;
+  description: string;
 };
 
 const Posts = async () => {
@@ -23,7 +26,7 @@ const Posts = async () => {
       <div className="flex flex-col items-center justify-center">
         {data &&
           data.blogs.map((item: any, i: number) => (
-            <div key={i} className="bg-gray-100 rounded-lg m-3 p-10">
+            <div key={i} className="bg-gray-100 rounded-lg mb-3 mt-3 p-10">
               <h2 className="font-bold text-xl text-left">
                 {data.blogs[i].title}
               </h2>
@@ -32,11 +35,16 @@ const Posts = async () => {
               </p>
               <Image
                 src={data.blogs[i].photo_url}
-                height={1000}
-                width={1000}
+                height={1300}
+                width={1300}
                 alt="blog preview image"
+                className="rounded-lg"
               />
-              <p className="text-gray-500 pt-3">{data.blogs[i].content_text}</p>
+              <p className="text-gray-500 pt-3">{data.blogs[i].description}</p>
+              <p className="text-gray-500 pt-3 hidden">
+                {data.blogs[i].content_text}
+              </p>
+              <Button />
             </div>
           ))}
       </div>
