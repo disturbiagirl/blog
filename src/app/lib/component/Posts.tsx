@@ -1,6 +1,14 @@
 import { Key } from "react";
 import Image from "next/image";
 
+type PostProps = {
+  blogs: PostProps[];
+  title: string;
+  content_text: string;
+  photo_url: string;
+  category: string;
+};
+
 const Posts = async () => {
   try {
     const res = await fetch(
@@ -9,16 +17,19 @@ const Posts = async () => {
         method: "GET",
       }
     );
-    const data = await res.json();
+    const data: PostProps = await res.json();
 
     return (
       <div className="flex flex-col items-center justify-center">
         {data &&
           data.blogs.map((item: any, i: number) => (
             <div key={i} className="bg-gray-100 rounded-lg m-3 p-10">
-              <h2 className="font-bold text-l text-center">
+              <h2 className="font-bold text-xl text-left">
                 {data.blogs[i].title}
               </h2>
+              <p className="text-stone-500 pb-3 pt-3">
+                Category: {data.blogs[i].category}
+              </p>
               <Image
                 src={data.blogs[i].photo_url}
                 height={1000}
