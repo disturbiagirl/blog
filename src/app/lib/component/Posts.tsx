@@ -2,15 +2,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import Button from "./Button";
-
-type PostProps = {
-  blogs: PostProps[];
-  title: string;
-  content_text: string;
-  photo_url: string;
-  category: string;
-  description: string;
-};
+import { PostProps } from "../types";
 
 const Posts = async () => {
   try {
@@ -21,7 +13,7 @@ const Posts = async () => {
       }
     );
     const data: PostProps = await res.json();
-
+    // console.log(Button.value);
     return (
       <div className="flex flex-col items-center justify-center">
         {data &&
@@ -41,7 +33,7 @@ const Posts = async () => {
                 className="rounded-lg"
               />
               <p className="text-gray-500 pt-3">{data.blogs[i].description}</p>
-              <p className="text-gray-500 pt-3 hidden">
+              <p id="content" className="text-gray-500 pt-3 hidden">
                 {data.blogs[i].content_text}
               </p>
               <Button />
