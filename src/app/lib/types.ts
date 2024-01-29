@@ -5,4 +5,5 @@ export interface PostProps {
   photo_url: string;
   category: string;
   description: string;
+  id: number;
 }
