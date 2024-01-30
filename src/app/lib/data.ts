@@ -10,3 +10,15 @@ export const fetchPosts = async () => {
     console.log(error);
   }
 };
+
+export const fetchPost = async (id: number) => {
+  try {
+    const data = await fetch(
+      `https://api.slingacademy.com/v1/sample-data/blog-posts/${id}`
+    ).then((response) => response.json());
+    const post = await data.blog;
+    return post;
+  } catch (error) {
+    console.log(error);
+  }
+};

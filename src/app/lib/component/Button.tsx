@@ -8,7 +8,6 @@ const Button = () => {
       {isOpen ? "read less..." : "read more..."}
     </button>
   );
-  // return isOpen;
 };
 
 export default Button;
