@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import Button from "./Button";
 import { fetchPosts } from "../data";
 import Link from "next/link";
 

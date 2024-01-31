@@ -22,3 +22,15 @@ export const fetchPost = async (id: number) => {
     console.log(error);
   }
 };
+
+export const fetchAuthor = async (id: number) => {
+  try {
+    const data = await fetch(
+      `https://api.slingacademy.com/v1/sample-data/users/${id}`
+    ).then((response) => response.json());
+    const author = await data.user;
+    return author;
+  } catch (error) {
+    console.log(error);
+  }
+};
