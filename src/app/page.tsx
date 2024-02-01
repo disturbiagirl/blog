@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Posts from "./lib/component/Posts";
+import Search from "./lib/component/Search";
 
 export default function Home() {
   return (
@@ -16,11 +17,13 @@ export default function Home() {
           blurDataURL="/cover.jpg"
         />
       </div>
+      <Search />
       <div className="flex flex-col items-center justify-center p-6">
         <h2 className="font-bold text-xl pb-6">Latest Blogs</h2>
         <div className="flex items-center justify-center">
           <Posts />
         </div>
+        S
       </div>
     </div>
   );
