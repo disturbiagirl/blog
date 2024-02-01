@@ -19,6 +19,7 @@ const Post = async ({ params }: { params: { id: number } }) => {
           width={1300}
           alt="blog preview image"
           className="rounded-lg"
+          priority={true}
         />
         <p id="content" className="text-gray-500 pt-3">
           {post.content_text}

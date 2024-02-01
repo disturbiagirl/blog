@@ -11,6 +11,9 @@ export default function Home() {
           width={1300}
           alt="cover image"
           className="rounded-lg"
+          priority={true}
+          placeholder="blur"
+          blurDataURL="/cover.jpg"
         />
       </div>
       <div className="flex flex-col items-center justify-center p-6">

@@ -5,7 +5,6 @@ import Link from "next/link";
 
 const Posts = async () => {
   const data = await fetchPosts();
-  console.log(data);
   return (
     <div className="flex flex-col items-center justify-center">
       {data.map((data: any) => {
