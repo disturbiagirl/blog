@@ -4,21 +4,21 @@ import {
   faMagnifyingGlass,
   faCircleStop,
 } from "@fortawesome/free-solid-svg-icons";
-// import { useSearchParams, usePathname, useRouter } from "next/navigation";
+import { useSearchParams, usePathname, useRouter } from "next/navigation";
 
 const Search = () => {
-  // const searchParams = useSearchParams();
-  // const pathname = usePathname();
-  // const { replace } = useRouter();
+  const searchParams = useSearchParams();
+  const pathname = usePathname();
+  const { replace } = useRouter();
   function handleSearch(term: string) {
-    // const params = new URLSearchParams(searchParams);
-    console.log(term);
-    // if (term) {
-    //   params.set("query", term);
-    // } else {
-    //   params.delete("query");
-    // }
-    // replace(`${pathname}?${params.toString()}`);
+    const params = new URLSearchParams(searchParams);
+
+    if (term) {
+      params.set("query", term);
+    } else {
+      params.delete("query");
+    }
+    replace(`${pathname}?${params.toString()}`);
   }
   return (
     <div className="flex items-center h-10 rounded-lg bg-gray-100 m-6 pl-3">
