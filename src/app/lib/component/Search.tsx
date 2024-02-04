@@ -1,9 +1,6 @@
 "use client";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faMagnifyingGlass,
-  faCircleStop,
-} from "@fortawesome/free-solid-svg-icons";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { useSearchParams, usePathname, useRouter } from "next/navigation";
 
 const Search = () => {
@@ -12,6 +9,7 @@ const Search = () => {
   const { replace } = useRouter();
   function handleSearch(term: string) {
     const params = new URLSearchParams(searchParams);
+    console.log(term);
 
     if (term) {
       params.set("query", term);
