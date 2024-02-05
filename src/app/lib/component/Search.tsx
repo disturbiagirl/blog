@@ -23,13 +23,13 @@ const Search = () => {
     replace(`${pathname}?${params.toString()}`);
   }
   return (
-    <div className="flex items-center h-10 rounded-lg bg-gray-100 m-6 pl-3">
+    <div className="flex items-center h-10 pl-3 m-6 bg-gray-100 rounded-lg">
       <FontAwesomeIcon icon={faMagnifyingGlass} />
       <input
         id="search"
         type="text"
         placeholder="Search posts..."
-        className="w-full h-full bg-transparent pl-2 outline-none"
+        className="w-full h-full pl-2 bg-transparent outline-none"
         onChange={(e) => {
           handleSearch(e.target.value);
         }}

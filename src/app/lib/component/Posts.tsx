@@ -9,10 +9,10 @@ const Posts = async () => {
     <div className="flex flex-col items-center justify-center">
       {data.map((data: any) => {
         return (
-          <div key={data.id} className="bg-gray-100 rounded-lg mb-3 mt-3 p-10">
-            <p className="text-gray-500 pb-3 pt-3">Post #{data.id}</p>
-            <h2 className="font-bold text-xl text-left">{data.title}</h2>
-            <p className="text-stone-500 pb-3 pt-3">
+          <div key={data.id} className="p-10 mt-3 mb-3 bg-gray-100 rounded-lg">
+            <p className="pt-3 pb-3 text-gray-500">Post #{data.id}</p>
+            <h2 className="text-xl font-bold text-left">{data.title}</h2>
+            <p className="pt-3 pb-3 text-stone-500">
               Category: {data.category}
             </p>
             <Image
@@ -22,7 +22,7 @@ const Posts = async () => {
               alt="blog preview image"
               className="rounded-lg"
             />
-            <p className="text-gray-500 pt-3">{data.description}</p>
+            <p className="pt-3 text-gray-500">{data.description}</p>
             <Link href={`/${data.id}`} className=" hover:text-sky-700">
               read more...
             </Link>
