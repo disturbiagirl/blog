@@ -2,9 +2,19 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
+import { fetchPosts } from "../data";
 
 const Search = () => {
   const [searchTerm, setSearchTerm] = useState("");
+  const [data, setData] = useState([]);
+
+  const fetchData = async () => {
+    const posts = await fetchPosts();
+    setData(posts);
+    console.log(data);
+  };
+
+  fetchData();
 
   const handleChange = (e: string) => {
     setSearchTerm(e);
