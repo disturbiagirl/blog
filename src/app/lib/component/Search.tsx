@@ -1,7 +1,7 @@
 "use client";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { fetchPosts } from "../data";
 
 const Search = () => {
@@ -11,10 +11,11 @@ const Search = () => {
   const fetchData = async () => {
     const posts = await fetchPosts();
     setData(posts);
-    console.log(data);
   };
 
-  fetchData();
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   const handleChange = (e: string) => {
     setSearchTerm(e);
