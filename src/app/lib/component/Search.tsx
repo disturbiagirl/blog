@@ -20,7 +20,7 @@ const Search = () => {
     fetchData();
   }, []);
 
-  const handleChange = (e) => {
+  const handleChange = (e: any) => {
     const searchText = e.target.value.toLowerCase();
     const filteredPosts = data.filter((post) =>
       post.title.toLowerCase().includes(searchText)
@@ -45,7 +45,7 @@ const Search = () => {
           className="w-full h-full pl-2 bg-transparent outline-none"
           onChange={(e) => handleChange(e)}
           value={searchTerm}
-          onBlur={handleClear}
+          onClick={handleClear}
         />
       </div>
       <div className="pl-6 pr-6">
