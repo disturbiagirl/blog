@@ -20,9 +20,9 @@ const Search = () => {
     fetchData();
   }, []);
 
-  const handleChange = (e: any) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const searchText = e.target.value.toLowerCase();
-    const filteredPosts = data.filter((post) =>
+    const filteredPosts = data.filter((post: { title: string }) =>
       post.title.toLowerCase().includes(searchText)
     );
     setFilteredData(filteredPosts);
@@ -62,7 +62,7 @@ const Search = () => {
               </div>
             );
           }
-        }, [])}
+        })}
       </div>
     </div>
   );
