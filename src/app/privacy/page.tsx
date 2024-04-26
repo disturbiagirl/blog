@@ -16,8 +16,8 @@ const Privacy = () => {
       <p className="pb-3">
         Like many other websites, we use cookies to enhance your experience
         while using our website. Cookies are small files that are stored on your
-        computer's hard drive through your web browser. These cookies are used
-        to analyze website traffic, customize content based on your preferences,
+        computer hard drive through your web browser. These cookies are used to
+        analyze website traffic, customize content based on your preferences,
         and gather information about your browsing habits on our site. You can
         set your browser to refuse all or some browser cookies, or to alert you
         when websites set or access cookies. If you disable or refuse cookies,
@@ -26,7 +26,7 @@ const Privacy = () => {
         the site, and gather demographic information. IP addresses, browser
         type, Internet service provider (ISP), referring/exit pages, platform
         type, date/time stamp, and number of clicks are used to analyze trends,
-        administer the site, track user's movement in the aggregate, and gather
+        administer the site, track users movement in the aggregate, and gather
         broad demographic information for aggregate use.
       </p>
       <h3 className="font-bold text-l pb-3">Security</h3>
